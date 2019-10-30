@@ -1,0 +1,29 @@
+
+
+{% extends "base.html" %}
+{% load static %}
+{% block body %}
+<div class="container profile">
+  <center>
+  <img src=" {% if profile.img %}{{profile.img.url}} {% else %} {% static 'home-static/img/avatar.png' %}{% endif %}" name="aboutme" width="140" height="140" border="0" class="img-circle"></a>
+  <h3 class="media-heading">{{profile.user}} </h3>
+  <span><strong>Skills: </strong></span>
+      <span class="label label-warning">HTML5/CSS</span>
+      <span class="label label-info">Adobe CS 5.5</span>
+      <span class="label label-info">Microsoft Office</span>
+      <span class="label label-success">Windows XP, Vista, 7</span>
+  </center>
+  <hr>
+  <center>
+  <p class="text-left"><strong>Bio: </strong><br>
+    {{profile.bio}}</p>
+  <br>
+  </center>
+  <div class="row">
+    <a href="{% url 'accounts:edit_profile' profile.slug %}"> Edit Profile</a>
+    <a href="{% url 'accounts:change_password' profile.slug %}"> Change Password</a>
+  </div>
+</div>
+
+
+{% endblock %}

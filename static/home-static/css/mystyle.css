@@ -1,0 +1,25 @@
+.post_banner{
+  width: 100% ;
+  height: 360px;
+}
+
+
+ .add_form{
+   margin: 0 auto;
+  margin-top: 100px;
+  margin-bottom: 100px;
+ }
+
+.page_body{
+  margin-top: 80px;
+}
+
+
+.messages {
+  margin-top: 85px;
+}
+
+
+.profile {
+  margin-top: 150px;
+}
